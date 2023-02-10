@@ -1,0 +1,42 @@
+<div class="banner">
+    <div class="container">
+        <div class="headder" >
+            <h2> Crypto Cions</h2>
+            <h6> cheack all the crypto currency latest updadte  </h6>
+
+        </div>
+        <div class="sub-header"> 
+             <!-- this is the marque that is running in the middel of our page with the different cions  -->
+<marquee behavior="scroll" onmouseover="stop()" onmouseout="start()" loop="infinite" direction="left">
+    <div class="row">
+
+         <ng-container *ngFor="let row of bannerData">
+             <div class="col-1">
+
+                <div class="card">
+
+                    <img [src]="row.image" width="100" class="img-fluid" alt="" >
+                    <div class="card-body">
+                        <h5 class="card-title">{{row.symbol | uppercase}} <span class="text-danger">{{row.market_cap_change_percentage_24h}}%</span></h5>
+                        <p class="card-text">{{row.current_price}} SD</p>
+                       
+                    </div>
+
+                </div>
+
+             </div>
+
+         </ng-container>
+    
+    </div>
+
+</marquee>
+        </div>
+
+    </div>
+</div>
+
+<div class="container mt-3"> 
+
+             <!-- Tables -->
+</div>

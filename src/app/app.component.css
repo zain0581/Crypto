@@ -1,0 +1,15 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .header{
+    text-shadow: 2px 2px 5px white;
+     text-indent: 60px;
+     color: yellowgreen;
+  }
+
+  .btn{
+    margin-right: 50px;
+  
+  }
+ 
