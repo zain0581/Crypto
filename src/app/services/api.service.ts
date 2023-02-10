@@ -16,7 +16,7 @@ export class ApiService {
 
 // This is the Api link to the header...
   getTrendingCrunnecy(crunnecy:string){
-    return this.http.get<any>(`https://api.coinecko.com/api/v3/coins/markets?vs_currency=${crunnecy}&order=gecko_desc&per_page=10&page=1&sparkline=false&price_change_percentage=24h`)
+    return this.http.get<any>(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=${crunnecy}&order=gecko_desc&per_page=10&page=1&sparkline=false&price_change_percentage=24h`)
   }
   // getGrapiclaCrunnecyData(coinId:string,crunnecy:string, days:number){
   //   return this.http.get<any>(`https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=${crunnecy}&days=${days}`)

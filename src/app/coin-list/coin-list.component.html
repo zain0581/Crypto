@@ -7,7 +7,7 @@
         </div>
         <div class="sub-header"> 
              <!-- this is the marque that is running in the middel of our page with the different cions  -->
-<marquee behavior="scroll" onmouseover="stop()" onmouseout="start()" loop="infinite" direction="left">
+<marquee behavior="scroll" onmouseover="stop()" onmouseout="start()" loop="infinite" direction="left" >
     <div class="row">
 
          <ng-container *ngFor="let row of bannerData">
@@ -18,7 +18,7 @@
                     <img [src]="row.image" width="100" class="img-fluid" alt="" >
                     <div class="card-body">
                         <h5 class="card-title">{{row.symbol | uppercase}} <span class="text-danger">{{row.market_cap_change_percentage_24h}}%</span></h5>
-                        <p class="card-text">{{row.current_price}} SD</p>
+                        <p class="card-text">{{row.current_price}} uSD</p>
                        
                     </div>
 
@@ -38,5 +38,37 @@
 
 <div class="container mt-3"> 
 
-             <!-- Tables -->
+    <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+
+              <th>Id</th>
+              <th>Name</th>
+              <th>Symbol</th>
+              <th>Change24H</th>
+              <th>Marketcap</th>
+              <th>Volume24h</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Bitcion</td>
+              <td>BTC</td>
+              <td>BTC</td>
+              <td>BTC</td>
+              <td>BTC</td>
+              <button type="button" class="btn btn-primary">edit </button>
+              <button type="button" class="btn btn-primary">delet </button>
+            </tr>
+            <tr>
+              <td>Row 2, Column 1</td>
+             
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
 </div>

@@ -61,3 +61,28 @@ p{
     font-weight: 600;
     color: lightseagreen;
 }
+/* @media only screen and (max-width: 600px) {
+} */
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+   
+    padding: 10px;
+    text-align: left;
+  }
+  .btn{
+      margin-right: 20%;
+  }
+ 
+  
