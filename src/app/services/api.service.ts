@@ -7,6 +7,8 @@ import{HttpClient} from '@angular/common/http'
 export class ApiService {
 
   //Adding http client And adding public apis her in each method::
+  
+ 
   constructor(private http :HttpClient) { }
 
 //It is a public Api From internet:

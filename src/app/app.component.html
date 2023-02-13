@@ -2,8 +2,8 @@
   <mat-toolbar >
    <span class="header" > <h4> Crypto Cheacker </h4></span> 
     <span class="example-spacer"></span>
-    <button type="button" class="btn btn-outline-primary">Login </button>
-    <button type="button" class="btn btn-outline-primary">Signup </button>
+    <button routerLink="/login"  type="submit" class="btn btn-primary btn-block  w-20" >Login</button>
+    <button   routerLink="/signup" type="submit" class="btn btn-primary btn-block  w-20" >Signup</button>
     <mat-form-field appearance="outline" >
    
       <mat-select (valueChange)="sendCurrency($event)"  class="text-sm" [(ngModel)]="selectedCurrency" >

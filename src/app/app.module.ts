@@ -13,6 +13,7 @@ import { CoinListComponent } from './coin-list/coin-list.component';
 import { CoinDetailComponent } from './coin-detail/coin-detail.component';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SignupComponent } from './signup/signup.component';
 
 
 
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     CoinListComponent,
     CoinDetailComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
