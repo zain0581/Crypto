@@ -15,9 +15,8 @@ h2{
 }
 
 h6{
-    color: white;
+    color: lightseagreen;
     text-transform: capitalize;
-    text-shadow: palevioletred;
     font-size: 1.4rem;
     font-weight: 500;
     line-height: 1.57;
@@ -54,12 +53,12 @@ h5{
     font-size: 70%;
     font-style: italic;
     font-weight: 800;
-    color: lightpink;
+    color: darkgoldenrod;
 
 }
 p{
     font-weight: 600;
-    color: lightseagreen;
+    color: darkmagenta;
 }
 /* @media only screen and (max-width: 600px) {
 } */

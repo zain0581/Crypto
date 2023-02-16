@@ -1,25 +1,31 @@
 
-
+ @media only screen and (min-width: 20px){
 .example-spacer {
     flex: 1 1 auto;
   }
-  @media only screen and (max-width: 6px){
+ 
   .header{
+    margin-left: -80px;
     text-shadow: 2px 2px 5px white;
      text-indent: 60px;
      color: yellowgreen;
+     cursor: pointer;
   }
-  }
+  
   .btn{
-    margin-right: 50px;
+    margin-right: 30px;
+margin-left: 30px;
   
   }
   h6{
-   
-  font-family: Georgia, 'Times New Roman', Times, serif;
     margin-left: 13px;
     font-size: larger;
     margin-bottom: 2px;
+    text-decoration-line: underline;
+    cursor: pointer;
+    
     
   }
 
+
+ }
