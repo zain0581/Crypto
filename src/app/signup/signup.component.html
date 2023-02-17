@@ -2,15 +2,15 @@
     <div class="containers">
         <div class = "row">
             <div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3" >
-                <div class="pannel border bg-white">
+                <div class="pannel border ">
                     <div class="pannel-heading">
-                        <h3 class="pt-3 font-weight-bold">Sign Up </h3>
+                        <h3 class="pt-3  font-weight-bold">Sign Up </h3>
                     </div>
                     <div class="pannel body p3">
                         
 
                             <form  [formGroup]="signupform">
-                                <div class="for-group pt-3">
+                                <div class="for-group pt-1 mx-5">
                                 <div class="input-field" [class.error]="signupform.controls['FirstName'].dirty && signupform.hasError('required','FirstName')">
                                     <span class="fa fa-user p-2" ></span>
                                     <input formControlName="FirstName" type="text" placeholder="FirstName">
@@ -23,7 +23,7 @@
                                 </div>
 
 
-                                <div class="for-group pt-3">
+                                <div class="for-group pt-3 mx-5">
                                     <div class="input-field" [class.error]="signupform.controls['LastName'].dirty && signupform.hasError('required','LastName')">
                                         <span class="fa fa-user p-2" ></span>
                                         <input formControlName="LastName" type="text" placeholder="LastName">
@@ -35,7 +35,7 @@
                                     </div>
 
 
-                                    <div class="for-group pt-3">
+                                    <div class="for-group pt-3 mx-5">
                                         <div class="input-field" [class.error]="signupform.controls['UserName'].dirty && signupform.hasError('required','UserName')">
                                             <span class="fa fa-user p-2" ></span>
                                             <input formControlName="UserName"  type="text" placeholder="UserName">
@@ -48,7 +48,7 @@
 
 
 
-                                        <div class="for-group pt-3">
+                                        <div class="for-group pt-3 mx-5">
                                             <div class="input-field" [class.error]="signupform.controls['Email'].dirty && signupform.hasError('required','Email')">
                                                 <span class="fa fa-user p-2" ></span>
                                                 <input formControlName="Email"  type="text" placeholder="Email">
@@ -61,7 +61,7 @@
 
 
                                 
-                                <div class="for-group pt-3">
+                                <div class="for-group pt-3 mx-5">
                                     <div class="input-field" [class.error]="signupform.controls['Password'].dirty && signupform.hasError('required','Password')">
                                         <span class="fa fa-lock p-2" ></span>
                                         <input formControlName="Password"  [type]="type" placeholder="Password">
@@ -70,12 +70,12 @@
                                     <small  *ngIf="signupform.controls['Password'].dirty && signupform.hasError('required','Password')" class="text-danger" class="text-danger" class="text-danger" >*Password is Requried</small>
                                     </div>
                                 <div class="mb-3 form-check"><br>
-                                 <br> <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                  <label  class="form" for="exampleCheck1">Check me out</label>
+                                 <!-- <br> <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                  <label  class="formm" for="exampleCheck1">Check me out</label> -->
                                 </div>
                                
 
-                                <button (click) ="onSignup()" type="submit" class="btn btn-primary btn-block mt-4 w-100" >Sign up</button>
+                                <button (click) ="onSignup()" type="submit" class="btn btn-primary btn-block " >Sign up</button>
                                 
                                 <div class="text-center pt-4 text-muted">Already have account? <a id="forget" class="foret" routerLink="/login" >Login</a> </div><br>
                                

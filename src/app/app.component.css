@@ -1,5 +1,11 @@
+/* 
+ @media screen and (min-width: 576px),
+  Media query for mobile devices 
+  screen and (max-width: 767px) ,
+ screen and (min-width: 992px),
+ screen and (min-width: 1200px) { */
 
- @media only screen and (min-width: 20px){
+  
 .example-spacer {
     flex: 1 1 auto;
   }
@@ -28,4 +34,4 @@ margin-left: 30px;
   }
 
 
- }
+ /* } */
