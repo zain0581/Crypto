@@ -18,7 +18,7 @@
                                          </div>
                                          
                                 </div>
-                                <small  *ngIf ="signupform.controls['FirstName'].dirty && signupform.hasError('required','FirstName')" class="text-danger" >*FirstName is Requried</small>
+                                <small  *ngIf ="signupform.controls['FirstName'].dirty && signupform.hasError('required','FirstName')" class="text-danger fw-bold" >*FirstName is Requried</small>
                                  
                                 </div>
 
@@ -31,7 +31,7 @@
                                              </div>
        
                                     </div>
-                                    <small *ngIf ="signupform.controls['LastName'].dirty && signupform.hasError('required','LastName')" class="text-danger" >*LastName is Requried</small>
+                                    <small *ngIf ="signupform.controls['LastName'].dirty && signupform.hasError('required','LastName')" class="text-danger fw-bold" >*LastName is Requried</small>
                                     </div>
 
 
@@ -43,7 +43,7 @@
                                                  </div>
            
                                         </div>
-                                        <small *ngIf="signupform.controls['UserName'].dirty && signupform.hasError('required','UserName')" class="text-danger" >*UserName is Requried</small>
+                                        <small *ngIf="signupform.controls['UserName'].dirty && signupform.hasError('required','UserName')" class="text-danger fw-bold" >*UserName is Requried</small>
                                         </div>
 
 
@@ -56,7 +56,7 @@
                                                      </div>
                
                                             </div>
-                                            <small *ngIf="signupform.controls['Email'].dirty && signupform.hasError('required','Email')" class="text-danger" class="text-danger" >*Email is Requried</small>
+                                            <small *ngIf="signupform.controls['Email'].dirty && signupform.hasError('required','Email')" class="text-danger" class="text-danger fw-bold" >*Email is Requried</small>
                                             </div>
 
 
@@ -67,7 +67,7 @@
                                         <input formControlName="Password"  [type]="type" placeholder="Password">
                                         <span (click)="hideshowpass()" class="fa {{eyeIcon}}"></span>
                                     </div>
-                                    <small  *ngIf="signupform.controls['Password'].dirty && signupform.hasError('required','Password')" class="text-danger" class="text-danger" class="text-danger" >*Password is Requried</small>
+                                    <small  *ngIf="signupform.controls['Password'].dirty && signupform.hasError('required','Password')" class="text-danger" class="text-danger" class="text-danger fw-bold" >*Password is Requried</small>
                                     </div>
                                 <div class="mb-3 form-check"><br>
                                  <!-- <br> <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -75,7 +75,7 @@
                                 </div>
                                
 
-                                <button (click) ="onSignup()" type="submit" class="btn btn-primary btn-block " >Sign up</button>
+                                <button (click) ="onSignup()" type="submit" class="btn btn-outline-success fw-bold " >Sign up</button>
                                 
                                 <div class="text-center pt-4 text-muted">Already have account? <a id="forget" class="foret" routerLink="/login" >Login</a> </div><br>
                                
