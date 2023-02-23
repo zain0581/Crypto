@@ -95,7 +95,7 @@ img{
     padding: 0 10px;
 } */
 
-
+@media (min-width: 500px) {
 .outer{
     height: 110vh;
     background: linear-gradient(to top,#ce5120 5%, #6e6ed5 90%) no-repeat ;
@@ -178,6 +178,8 @@ input[type='password']{
 
   
 }
+}
+
 
 /* 
 img{

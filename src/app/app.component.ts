@@ -11,15 +11,24 @@ export class AppComponent {
     throw new Error('Method not implemented.');
   }
 //value in mat input default *USD*
-  selectedCurrency: string ="USD";
+  // selectedCurrency: string ="USD";
 
+  isExpanded = false;
+
+  collapse() {
+    this.isExpanded = false;
+  }
+
+  toggle() {
+    this.isExpanded = !this.isExpanded;
+  }
 
   constructor(){
   
   }
   //valuter skifter
-  sendCurrency(event:string){
-    console.log(event);
-  }
+  // sendCurrency(event:string){
+  //   console.log(event);
+  // }
 
 }

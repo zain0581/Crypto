@@ -5,7 +5,7 @@
  screen and (min-width: 992px),
  screen and (min-width: 1200px) { */
 
-  
+/*   
 .example-spacer {
     flex: 1 1 auto;
   }
@@ -31,7 +31,39 @@ margin-left: 30px;
     cursor: pointer;
     
     
-  }
+  } */
 
 
  /* } */
+
+
+ a.navbar-brand {
+
+  text-align: center;
+
+  font-weight: 600;
+  text-shadow: yellowgreen;
+
+}
+
+html {
+  font-size: 14px;
+
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+.nav-item{
+  font-weight: 700;
+  font-size: 17px;
+ margin-right: 50px;
+ padding: 4px;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgb(150, 17, 17);
+  background-color: rgb(233, 215, 156);
+border-radius: 50px;
+}
