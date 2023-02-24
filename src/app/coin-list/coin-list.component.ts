@@ -1,5 +1,9 @@
-import { Component } from '@angular/core';
+// import { Component } from '@angular/core';
 import { ApiService } from '../services/api.service';
+import {AfterViewInit, Component, ViewChild} from '@angular/core';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatSort} from '@angular/material/sort';
+import {MatTableDataSource} from '@angular/material/table';
 
 @Component({
   selector: 'app-coin-list',
@@ -9,6 +13,12 @@ import { ApiService } from '../services/api.service';
 export class CoinListComponent {
 
 bannerData:any = [];
+// dataSource!: MatTableDataSource<any>;
+// displayedColumns:string[]=['Symbol','currentprice','price change','marketcap24']
+
+// @ViewChild(MatPaginator) paginator!: MatPaginator;
+// @ViewChild(MatSort) sort!: MatSort;
+
 
   /**
    calling Api methodds
@@ -32,6 +42,16 @@ this.bannerData=res;
   })
   }
 }
+//   applyFilter(event: Event) {
+//     const filterValue = (event.target as HTMLInputElement).value;
+//     this.dataSource.filter = filterValue.trim().toLowerCase();
+
+//     if (this.dataSource.paginator) {
+//       this.dataSource.paginator.firstPage();
+//     }
+//   }
+// }
+
 
 //   getalldata(){
 //     this.api.getCrunnecy("USD")

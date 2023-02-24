@@ -14,13 +14,13 @@
 
                             <form [formGroup]="loginform" >
                                 <div class="for-group pt-3 mx-5 ">
-                                <div class="input-field mx-5 " [class.error]="loginform.controls['username'].dirty && loginform.hasError('required','username')">
-                                    <span class="fa fa-user p-2" ></span>
-                                    <input formControlName="username" type="text" placeholder="Username">
+                                <div class="input-field mx-5 " [class.error]="loginform.controls['Email'].dirty && loginform.hasError('required','Email')">
+                                    <span class="fa fa-envelope p-2" ></span>
+                                    <input formControlName="Email" type="text" placeholder="Email">
                                 </div>
                                   <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
                                 </div>
-                                <small *ngIf ="loginform.controls['username'].dirty && loginform.hasError('required','username')" class="text-danger mx-5 fw-bold" >*username is Requried</small>
+                                <small *ngIf ="loginform.controls['Email'].dirty && loginform.hasError('required','Email')" class="text-danger mx-5 fw-bold" >*Email is Requried</small>
                                 <div class="for-group pt-3 mx-5">
                                     <div class="input-field mx-5" [class.error]="loginform.controls['Password'].dirty && loginform.hasError('required','Password')" >
                                         <span class="fa fa-lock p-2" ></span>
@@ -40,7 +40,7 @@
                                 </div>
 
                                 <button  (click)="onLogin()" type="submit" class="btn btn-primary btn-block " >Login</button>
-                                <div class="text-center pt-4 text-muted fw-bold">Don't have account? <a id="forget" class="forget" routerLink="/signup" >Sign Up</a> </div>
+                                <div class="text-center pt-4 text-muted fw-bold">Don't have account? <a id="forget" class="forget" routerLink="/signup" >Sign Up <i class="fa fa-spinner" aria-hidden="true"></i></a>  </div>
                                 
                                 
                                

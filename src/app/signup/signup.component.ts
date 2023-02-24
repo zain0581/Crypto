@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import{ApiService} from'../services/api.service';
 
 @Component({
   selector: 'app-signup',
@@ -19,16 +21,17 @@ export class SignupComponent {
   /**
    *
    */
-  constructor(private fb:FormBuilder) {}
+  constructor(private fb:FormBuilder,private auth: ApiService, private router:Router ) {}
   ngOnInit():void{
     this.signupform = this.fb.group(
       {
   
         FirstName:['',Validators.required],
         LastName:['',Validators.required],
-        UserName:['',Validators.required],
+        // UserName:['',Validators.required],
         Email:['',Validators.required],
         Password:['',Validators.required]
+        // role:['',Validators.required]
        
       }
     )
@@ -44,15 +47,39 @@ export class SignupComponent {
 
 }
 
-
 onSignup(){
   if(this.signupform.valid){
-    console.log(this.signupform.value) }
-    else{
-      this.validateallformfields(this.signupform);
-      alert("Invalid Form")
-    }
+    //send the obj to database
+     console.log(this.signupform.value);
+
+    this.auth.signup(this.signupform.value)
+    .subscribe({
+      next:(res)=>{  
+       alert(res.message);
+       this.signupform.reset();
+       this.router.navigate(['login']);
+  },
+      error:(err)=>{
+        
+        alert(err && err.message)
+  
+  }
+      });
+    // console.log(this.signupform.value)
+    
+
+  }
+  else{
+    
+    //throw the erroe using toaster and with required fields
+   // calling the method her::
+ 
+    this.validateallformfields(this.signupform);
+    alert("your form is invalid")
+  }
+
 }
+
 private validateallformfields(formGroup: FormGroup<any>) {
   Object.keys(formGroup.controls).forEach(field=>{
     const control = formGroup.get(field);

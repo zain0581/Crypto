@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup,Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import{ApiService} from'../services/api.service';
 @Component({
@@ -16,13 +17,13 @@ export class LoginComponent {
 
 //loginform
   loginform!:FormGroup;
-  constructor( private fb:FormBuilder, private auth:ApiService ){}
+  constructor( private fb:FormBuilder, private auth:ApiService,private rout:Router ){}
 
   //This is method that requries you to input somthing in password fied othervise it vil give error
   ngOnInit():void{
   this.loginform = this.fb.group(
     {
-      username:['',Validators.required],
+      Email:['',Validators.required],
       Password:['',Validators.required]
     }
   )
@@ -48,6 +49,9 @@ hideshowpass(){
           .subscribe({
           next:(S)=>{
            alert(S.message)
+           this.loginform.reset();
+           this.rout.navigate(['dashboard'])
+         
       },
           error:(er)=>{
             console.log(er&& er.message);

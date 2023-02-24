@@ -10,12 +10,13 @@ export class ApiService {
 
   //Adding http client And adding public apis her in each method::
   constructor(private http :HttpClient) { }
-  private baseUrl:string ="https://localhost:7176/api/User/"
+  private baseUrl:string ="https://localhost:7125/api/User/"
+  //https://localhost:7176/api/User/
 
 
 
   signup(user:any):Observable<any>{
-    const url = `${this.baseUrl}regristration`;
+    const url = `${this.baseUrl}Registration`;
     return this.http.post<any>(url, user);
   // return this.http.post<any>(`${this.baseUrl}regristration`,user)
   }

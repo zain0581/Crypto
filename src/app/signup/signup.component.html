@@ -35,7 +35,7 @@
                                     </div>
 
 
-                                    <div class="for-group pt-3 mx-5">
+                                    <!-- <div class="for-group pt-3 mx-5">
                                         <div class="input-field" [class.error]="signupform.controls['UserName'].dirty && signupform.hasError('required','UserName')">
                                             <span class="fa fa-user p-2" ></span>
                                             <input formControlName="UserName"  type="text" placeholder="UserName">
@@ -44,13 +44,13 @@
            
                                         </div>
                                         <small *ngIf="signupform.controls['UserName'].dirty && signupform.hasError('required','UserName')" class="text-danger fw-bold" >*UserName is Requried</small>
-                                        </div>
+                                        </div> -->
 
 
 
                                         <div class="for-group pt-3 mx-5">
                                             <div class="input-field" [class.error]="signupform.controls['Email'].dirty && signupform.hasError('required','Email')">
-                                                <span class="fa fa-user p-2" ></span>
+                                                <span class="fa fa-envelope p-2" ></span>
                                                 <input formControlName="Email"  type="text" placeholder="Email">
                                                 <div >
                                                      </div>
@@ -69,6 +69,17 @@
                                     </div>
                                     <small  *ngIf="signupform.controls['Password'].dirty && signupform.hasError('required','Password')" class="text-danger" class="text-danger" class="text-danger fw-bold" >*Password is Requried</small>
                                     </div>
+
+                                    <!-- <div class="for-group pt-3 mx-5">
+                                        <div class="input-field" [class.error]="signupform.controls['role'].dirty && signupform.hasError('required','role')">
+                                            <span class="fa fa-user p-2" ></span>
+                                            <input formControlName="role"  type="text" placeholder="role">
+                                            <div >
+                                                 </div>
+           
+                                        </div>
+                                        <small *ngIf="signupform.controls['role'].dirty && signupform.hasError('required','role')" class="text-danger" class="text-danger fw-bold" >*role is Requried</small>
+                                        </div> -->
                                 <div class="mb-3 form-check"><br>
                                  <!-- <br> <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                   <label  class="formm" for="exampleCheck1">Check me out</label> -->
@@ -77,7 +88,7 @@
 
                                 <button (click) ="onSignup()" type="submit" class="btn btn-outline-success fw-bold " >Sign up</button>
                                 
-                                <div class="text-center pt-4 text-muted">Already have account? <a id="forget" class="foret" routerLink="/login" >Login</a> </div><br>
+                                <div class="text-center pt-4 text-muted">Already have account? <a id="forget" class="foret" routerLink="/login" >Login</a>  </div><br>
                                
                                 
                                
