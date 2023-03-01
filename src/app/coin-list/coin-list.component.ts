@@ -11,7 +11,7 @@ import {MatTableDataSource} from '@angular/material/table';
   styleUrls: ['./coin-list.component.css']
 })
 export class CoinListComponent {
-
+  coins :any =[];
 bannerData:any = [];
 // dataSource!: MatTableDataSource<any>;
 // displayedColumns:string[]=['Symbol','currentprice','price change','marketcap24']
@@ -28,6 +28,7 @@ bannerData:any = [];
   ngOnInit():void{
 // calling the uder methods to see  Arrays with data in aplictaion inspect 
 this.getbannerData();
+this.getalldata();
 // this.getalldata();
   }
 
@@ -41,7 +42,7 @@ this.bannerData=res;
 
   })
   }
-}
+
 //   applyFilter(event: Event) {
 //     const filterValue = (event.target as HTMLInputElement).value;
 //     this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -53,12 +54,20 @@ this.bannerData=res;
 // }
 
 
-//   getalldata(){
-//     this.api.getCrunnecy("USD")
-//     .subscribe(res=>{
-// console.log(res);
+getalldata() {
+  this.api.getCrunnecy("USD")
+  .subscribe((data: Coin[]) => {
+    this.coins = data;
+       // assigning the fetched data to the coins array
+    });
+}
+}
 
-//     })
-//   }
-  
-// }
+
+interface Coin {
+  name: string;
+  symbol: string;
+  marketCap: number;
+  volume24h: number;
+  change24h: number;
+}

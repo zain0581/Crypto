@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup,Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 import{ApiService} from'../services/api.service';
 @Component({
@@ -48,13 +49,15 @@ hideshowpass(){
           this.auth.login(this.loginform.value)
           .subscribe({
           next:(S)=>{
-           alert(S.message)
+            alert("Login nSuccess")
            this.loginform.reset();
            this.rout.navigate(['dashboard'])
+          
          
       },
           error:(er)=>{
             console.log(er&& er.message);
+            alert("your Email or Password is incorrect")
       
       
       }
@@ -72,6 +75,12 @@ hideshowpass(){
         }
       
       }
+ 
+      
+    
+
+
+
 
       private validateallformfields(formGroup: FormGroup<any>) {
         Object.keys(formGroup.controls).forEach(field=>{
