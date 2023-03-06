@@ -19,6 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { NgToastModule } from 'ng-angular-popup';
 
 
 
@@ -44,7 +45,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     FontAwesomeModule,
     ReactiveFormsModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    NgToastModule
   
   ],
   providers: [],

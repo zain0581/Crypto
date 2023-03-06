@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup,Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { NgToastService } from 'ng-angular-popup';
 
 import{ApiService} from'../services/api.service';
 @Component({
@@ -15,10 +16,10 @@ export class LoginComponent {
   type:string = "password";
   istext:boolean = false;
   eyeIcon:string="fa-eye-slash";
-
+  
 //loginform
   loginform!:FormGroup;
-  constructor( private fb:FormBuilder, private auth:ApiService,private rout:Router ){}
+  constructor( private fb:FormBuilder, private auth:ApiService,private rout:Router,private toast: NgToastService ){}
 
   //This is method that requries you to input somthing in password fied othervise it vil give error
   ngOnInit():void{
@@ -48,16 +49,16 @@ hideshowpass(){
       
           this.auth.login(this.loginform.value)
           .subscribe({
-          next:(S)=>{
-            alert("Login nSuccess")
+          next:(er)=>{
+           this.toast.success({detail:"Success Message",summary:"Login successfully",duration:5000})
            this.loginform.reset();
            this.rout.navigate(['dashboard'])
-          
+        
          
       },
           error:(er)=>{
             console.log(er&& er.message);
-            alert("your Email or Password is incorrect")
+       this.toast.error({detail:"Try Again",summary:"Login Failed",duration:5000})
       
       
       }
@@ -71,13 +72,50 @@ hideshowpass(){
           //throw the erroe using toaster and with required fields
           //calling the method her::
           this.validateallformfields(this.loginform);
-          alert("your form is invalid")
+          this.toast.warning({detail:"WARNING",summary:"Miss something?",duration:5000})
+       
         }
       
       }
- 
+     
+      // onLogin() {
+      //   if (this.loginform.valid) {
+      //     const userObj = {
+      //       Email: this.loginform.controls['Email'].value,
+      //       Password: this.loginform.controls['Password'].value
+      //     };
+      //     this.auth.login(userObj)
+      //         .subscribe({
+      //         next:(S)=>{
+      //          alert(S.message)
+      //         //  this.loginform.reset();
+      //         //  this.rout.navigate(['dashboard'])
+             
+      //     },
+      //         error:(er)=>{
+      //           console.log(er);
+      //           alert(er);
+          
+      //     //
+      //     }
+      //         });
+          // this.http.post('/api/user/authenticate', userObj)
+          //   .subscribe(
+          //     response => {
+          //       console.log(response);
+          //       // Handle success response
+          //     },
+          //     error => {
+          //       console.log(error);
+          //       // Handle error response
+          //     }
+          //   );
+        //}
+        //}
       
     
+
+
 
 
 
