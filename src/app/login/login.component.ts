@@ -18,17 +18,20 @@ export class LoginComponent {
   eyeIcon:string="fa-eye-slash";
   
 //loginform
-  loginform!:FormGroup;
+loginform: FormGroup = this.fb.group({
+  Email: ['', Validators.required],
+  Password: ['', Validators.required]
+});
   constructor( private fb:FormBuilder, private auth:ApiService,private rout:Router,private toast: NgToastService ){}
 
   //This is method that requries you to input somthing in password fied othervise it vil give error
   ngOnInit():void{
-  this.loginform = this.fb.group(
-    {
-      Email:['',Validators.required],
-      Password:['',Validators.required]
-    }
-  )
+  // this.loginform = this.fb.group(
+  //   {
+  //     Email:['',Validators.required],
+  //     Password:['',Validators.required]
+  //   }
+  // )
 }
 
 
@@ -58,7 +61,7 @@ hideshowpass(){
       },
           error:(er)=>{
             console.log(er&& er.message);
-       this.toast.error({detail:"Try Again",summary:"Login Failed",duration:5000})
+       this.toast.error({detail:"Login Failed",summary:"Wrong Email or Password ",duration:5000})
       
       
       }
@@ -72,7 +75,7 @@ hideshowpass(){
           //throw the erroe using toaster and with required fields
           //calling the method her::
           this.validateallformfields(this.loginform);
-          this.toast.warning({detail:"WARNING",summary:"Miss something?",duration:5000})
+          this.toast.warning({detail:"WARNING",summary:"Miss Something? ",duration:5000})
        
         }
       
@@ -132,6 +135,16 @@ hideshowpass(){
         })
         
         
+        }
+
+        logout() {
+          // Here you can remove the user data from the local variable and redirect to the login page
+          // this.loginform = null;
+          this.rout.navigate(['/coin-list']);
+        }
+        isLoggedIn() {
+          // Here you can check if the user is logged in by checking if the local variable has a value
+          return this.loginform != null;
         }
       
 }
