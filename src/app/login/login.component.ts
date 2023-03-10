@@ -49,13 +49,16 @@ hideshowpass(){
         if(this.loginform.valid){
           //send the obj to database
           console.log(this.loginform.value)
-      
+        
           this.auth.login(this.loginform.value)
           .subscribe({
           next:(er)=>{
            this.toast.success({detail:"Success Message",summary:"Login successfully",duration:5000})
+           sessionStorage.setItem("Email","Password");
            this.loginform.reset();
-           this.rout.navigate(['dashboard'])
+           this.rout.navigate(['/dashboard']);
+          
+           
         
          
       },
@@ -137,14 +140,8 @@ hideshowpass(){
         
         }
 
-        logout() {
-          // Here you can remove the user data from the local variable and redirect to the login page
-          // this.loginform = null;
-          this.rout.navigate(['/coin-list']);
-        }
-        isLoggedIn() {
-          // Here you can check if the user is logged in by checking if the local variable has a value
-          return this.loginform != null;
+        getData(){
+          return sessionStorage.getItem('Email');
         }
       
 }

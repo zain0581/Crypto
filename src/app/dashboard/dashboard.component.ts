@@ -19,12 +19,13 @@ export class DashboardComponent {
   logout() {
     // Here you can remove the user data from the local variable and redirect to the login page
     this.loggedInUser = null;
-    this.router.navigate(['/coin-list']);
+    sessionStorage.clear();
+    this.router.navigate(['/login']);
   }
-  isLoggedIn() : boolean {
-    // Here you can check if the user is logged in by checking if the local variable has a value
-    return this.loggedInUser != null;
-  }
+  // isLoggedIn() : boolean {
+  //   // Here you can check if the user is logged in by checking if the local variable has a value
+  //   return this.loggedInUser != null;
+  // }
 
   
 }
