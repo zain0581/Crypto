@@ -54,7 +54,8 @@ hideshowpass(){
           .subscribe({
           next:(er)=>{
            this.toast.success({detail:"Success Message",summary:"Login successfully",duration:5000})
-           sessionStorage.setItem("Email","Password");
+            
+           sessionStorage.setItem("Email",this.loginform.value.email);
            this.loginform.reset();
            this.rout.navigate(['/dashboard']);
           

@@ -62,8 +62,3 @@ html {
  padding: 4px;
 }
 
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgb(150, 17, 17);
-  background-color: rgb(233, 215, 156);
-border-radius: 50px;
-}

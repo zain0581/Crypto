@@ -20,6 +20,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { NgToastModule } from 'ng-angular-popup';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 
@@ -31,7 +32,8 @@ import { NgToastModule } from 'ng-angular-popup';
     CoinDetailComponent,
     LoginComponent,
     SignupComponent,
-    DashboardComponent
+    DashboardComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
