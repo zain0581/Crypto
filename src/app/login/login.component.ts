@@ -48,14 +48,15 @@ hideshowpass(){
       onLogin(){
         if(this.loginform.valid){
           //send the obj to database
-          console.log(this.loginform.value)
+          console.log(this.loginform.value.Email)
         
           this.auth.login(this.loginform.value)
           .subscribe({
           next:(er)=>{
-           this.toast.success({detail:"Success Message",summary:"Login successfully",duration:5000})
+           this.toast.success ({detail:"Success Message",summary:er.firstName,duration:5000})
             
-           sessionStorage.setItem("Email",this.loginform.value.email);
+           sessionStorage.setItem("Email",this.loginform.value.Email);
+           sessionStorage.setItem("firstName",er.firstName);
            this.loginform.reset();
            this.rout.navigate(['/dashboard']);
           
@@ -141,8 +142,4 @@ hideshowpass(){
         
         }
 
-        getData(){
-          return sessionStorage.getItem('Email');
-        }
-      
 }

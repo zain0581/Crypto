@@ -42,7 +42,7 @@ export class DashboardComponent {
   //   return this.loggedInUser != null;
   // }
   getData() {
-    return sessionStorage.getItem('Email');
+    return sessionStorage.getItem('firstName');
   }
 
   

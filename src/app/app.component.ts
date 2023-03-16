@@ -26,6 +26,9 @@ export class AppComponent {
   constructor(){
   
   }
+  getData() {
+    return sessionStorage.getItem('Email');
+  }
   //valuter skifter
   // sendCurrency(event:string){
   //   console.log(event);
