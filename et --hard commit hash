@@ -1,0 +1,25 @@
+[33m294fc04[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{0}: reset: moving to 294fc0423f5ae14a03075d54a3dba04a7ef95a1b
+[33mb219a4f[m HEAD@{1}: commit: s
+[33m4c50299[m HEAD@{2}: reset: moving to HEAD
+[33m4c50299[m HEAD@{3}: commit: d.17.03
+[33m1461f31[m HEAD@{4}: commit: d.13.03
+[33m2dab7af[m HEAD@{5}: commit: d.10
+[33mbfb2d5d[m HEAD@{6}: commit: d.09
+[33mebe4f96[m HEAD@{7}: commit: d.6.03
+[33m25e0ea0[m HEAD@{8}: commit: d.1.03
+[33m21ed208[m HEAD@{9}: commit: d.24
+[33m44afd98[m HEAD@{10}: commit: d.23
+[33me5b86a4[m HEAD@{11}: commit: d.22
+[33m538d3ca[m HEAD@{12}: commit: d.17
+[33m0f9ba14[m HEAD@{13}: commit: d.16
+[33m75fe29d[m HEAD@{14}: commit: d.15
+[33m48e9691[m HEAD@{15}: commit: h
+[33m6429c98[m HEAD@{16}: commit: d.13
+[33mbf4500d[m HEAD@{17}: commit: kl14
+[33m6a1f928[m HEAD@{18}: commit: 13
+[33m06a2299[m HEAD@{19}: commit: c
+[33m6e20f58[m[33m ([m[1;32ma[m[33m)[m HEAD@{20}: checkout: moving from a to master
+[33m6e20f58[m[33m ([m[1;32ma[m[33m)[m HEAD@{21}: checkout: moving from master to a
+[33m6e20f58[m[33m ([m[1;32ma[m[33m)[m HEAD@{22}: commit: asd
+[33m5dd0b60[m HEAD@{23}: commit: a
+[33m58ba45a[m HEAD@{24}: clone: from https://github.com/zain0581/Crypto

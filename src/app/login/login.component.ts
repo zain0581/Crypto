@@ -53,10 +53,11 @@ hideshowpass(){
           this.auth.login(this.loginform.value)
           .subscribe({
           next:(er)=>{
-           this.toast.success ({detail:"Success Message",summary:er.firstName,duration:5000})
-            
+           this.toast.success({detail:"Success Message",summary:"Welcome    " + er.email,duration:5000 })
+            //Session storage  setting data here:
            sessionStorage.setItem("Email",this.loginform.value.Email);
            sessionStorage.setItem("firstName",er.firstName);
+           sessionStorage.setItem("lastName",er.lastName);
            this.loginform.reset();
            this.rout.navigate(['/dashboard']);
           
@@ -64,6 +65,7 @@ hideshowpass(){
         
          
       },
+      //Error Message here
           error:(er)=>{
             console.log(er&& er.message);
        this.toast.error({detail:"Login Failed",summary:"Wrong Email or Password ",duration:5000})
@@ -86,48 +88,10 @@ hideshowpass(){
       
       }
      
-      // onLogin() {
-      //   if (this.loginform.valid) {
-      //     const userObj = {
-      //       Email: this.loginform.controls['Email'].value,
-      //       Password: this.loginform.controls['Password'].value
-      //     };
-      //     this.auth.login(userObj)
-      //         .subscribe({
-      //         next:(S)=>{
-      //          alert(S.message)
-      //         //  this.loginform.reset();
-      //         //  this.rout.navigate(['dashboard'])
-             
-      //     },
-      //         error:(er)=>{
-      //           console.log(er);
-      //           alert(er);
-          
-      //     //
-      //     }
-      //         });
-          // this.http.post('/api/user/authenticate', userObj)
-          //   .subscribe(
-          //     response => {
-          //       console.log(response);
-          //       // Handle success response
-          //     },
-          //     error => {
-          //       console.log(error);
-          //       // Handle error response
-          //     }
-          //   );
-        //}
-        //}
-      
+
     
 
-
-
-
-
-
+      // this field is for valdation form (red lines if no data in input field )
       private validateallformfields(formGroup: FormGroup<any>) {
         Object.keys(formGroup.controls).forEach(field=>{
           const control = formGroup.get(field);
@@ -142,4 +106,5 @@ hideshowpass(){
         
         }
 
+   
 }

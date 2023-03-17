@@ -1,8 +1,15 @@
 
-<p>Welcome {{ getData() }}!</p>
+
+<div class="card text-bg-primary  mt-5 {{ getData() }}" style="max-width: 18rem;">
+  <div class="card-header">Hello User</div>
+  <div class="card-body">
+    <h5 class="card-title">Welcome</h5>
+    <p class="card-text">{{ getData() }}</p>
+  </div>
+</div>
 
  
-  <button (click)="logout()" class="btn btn-danger "  >Logout</button> 
+  
 
 
  <!-- <div class="container">

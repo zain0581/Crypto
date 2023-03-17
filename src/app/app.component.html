@@ -26,10 +26,13 @@
   <header>
     <nav
       class="navbar navbar-expand-sm navbar-toggleable-sm  border-bottom box-shadow mb-0 border-top mt-10 box-shadow bg-secondary p-3"
-    >
-    <!-- <p>Welcome {{ getData() }}!</p> -->
-      <div class="container">
-        <a class="navbar-brand" [routerLink]="['/coin-list']">Treanding coins </a>
+
+    ><div >  <img [routerLink]="['/coin-list']"  class ="imgg mt-2" src="assets\btc++.svg" > </div>
+ 
+      <div class="container" >
+        
+       
+         <!-- <a  *ngIf= "!getData()" class="navbar-brand" [routerLink]="['/coin-list']"> CR </a>  -->
         <button
           class="navbar-toggler"
           type="button"
@@ -48,31 +51,55 @@
           [ngClass]="{ show: isExpanded }"
         >
           <ul class="navbar-nav flex-grow">
-            <li
+            <li *ngIf= "!getData()" 
               class="nav-item"
               [routerLinkActive]="['link-active']"
               [routerLinkActiveOptions]="{ exact: true }"
             >
-              <a class="nav-link text-dark" [routerLink]="['/coin-list']">Home</a>
+              <a class="nav-link text-dark" [routerLink]="['/coin-list']" >Home  </a>
+              
             </li>
+
+            <li *ngIf= "!getData()" class="nav-item" [routerLinkActive]="['link-active']">
+              <a class="nav-link text-dark" [routerLink]="['/login']"
+                >Login</a
+              >
+            </li>
+
+            <li *ngIf= "!getData()" class="nav-item " [routerLinkActive]="['link-active']">
+              <a class="nav-link text-dark" [routerLink]="['/signup']"
+                >Signup</a
+              >
+            </li>
+
+            <li *ngIf= "getData()" class="nav-item " [routerLinkActive]="['link-active']">
+              <a class="nav-link text-dark" [routerLink]="['/signup']"
+                >Contact</a
+              >
+            </li>
+               
+            <li *ngIf= "getData()" class="nav-item " [routerLinkActive]="['link-active']">
+              <a class="nav-link text-dark" [routerLink]="['/coin-detail']"
+                >coinDetails</a
+              >
+            </li>
+
+
+            <li *ngIf= "getData()" class="nav-item " [routerLinkActive]="['link-active']">
+              <a class="nav-link text-dark" [routerLink]="['/signup']"
+                >TranscationDetails</a
+              >
+            </li>
+
             
-   
-              <li *ngIf= "!getData()" class="nav-item" [routerLinkActive]="['link-active']">
-                <a class="nav-link text-dark" [routerLink]="['/login']"
-                  >Login</a
-                >
-              </li>
-  
-              <li *ngIf= "!getData()" class="nav-item " [routerLinkActive]="['link-active']">
-                <a class="nav-link text-dark" [routerLink]="['/signup']"
-                  >Signup</a
-                >
-              </li>
-             
-          
+            <li *ngIf= "getData()" class="nav-item " [routerLinkActive]="['link-active']">
+              <a class="nav-link text-dark" [routerLink]="['/dashboard']"
+                >User Dashboard</a
+              >
+            </li>
 
-       
-
+            <button *ngIf= "getData()" (click)="logout()" class="btn btn-danger "  >Logout</button> 
+         
           </ul>
         </div>
       </div>

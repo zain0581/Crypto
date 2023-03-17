@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 
 
 @Component({
@@ -23,7 +24,7 @@ export class AppComponent {
     this.isExpanded = !this.isExpanded;
   }
 
-  constructor(){
+  constructor(private rout: Router){
   
   }
   getData() {
@@ -33,5 +34,12 @@ export class AppComponent {
   // sendCurrency(event:string){
   //   console.log(event);
   // }
+
+  logout() {
+    // Here you can remove the user data from the local variable and redirect to the login page
+    //  this.loggedInUser = null;
+    sessionStorage.clear();
+    this.rout.navigate(['/login']);
+  }
 
 }

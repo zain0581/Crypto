@@ -54,6 +54,18 @@ html {
   html {
     font-size: 16px;
   }
+
+  /* .btn{
+    margin-right: -300px;
+  } */
+}
+.imgg{
+  height: 60px;
+ margin-left: 50px;
+
+  /* align-items: center;
+  align-content :center; */
+
 }
 .nav-item{
   font-weight: 700;
