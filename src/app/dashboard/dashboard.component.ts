@@ -27,7 +27,7 @@ export class DashboardComponent {
 
 // Getting data from for login (Session storage)
   getData() {
-    return sessionStorage.getItem('firstName');
+    //return sessionStorage.getItem('firstName');
     // const Email = sessionStorage.getItem('Email')
      const firstName =  sessionStorage.getItem('firstName');
     const lastName = sessionStorage.getItem('lastName');
