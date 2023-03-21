@@ -73,4 +73,18 @@ html {
  margin-right: 50px;
  padding: 4px;
 }
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 

@@ -97,7 +97,7 @@ img{
 
 @media (min-width: 500px) {
 .outer{
-    height: 110vh;
+    height: 100vh;
     background: linear-gradient(to top,#ce5120 5%, #6e6ed5 90%) no-repeat ;
    
     
@@ -106,7 +106,7 @@ img{
 
 .pannel-heading {
     text-align: center;
-    margin-bottom: 10%;
+    margin-bottom: 1%;
 }
 
 #forget{
@@ -139,13 +139,13 @@ a:hover{
     
 }
 .pannel{
-    width: 530px;
-    height: 460px;
-    box-shadow: 20px 20px 9px  rgb(218,218,218);
+    width: 520px;
+    height: 440px;
+     box-shadow: 20px 20px 9px  rgb(218,218,218); 
     border-radius: 90px;
-    margin-top: 120px;      
-    background-color: rgb(228, 139, 139)
-    /* background: transparent; */
+    margin-top: 150px;      
+     background-color: rgb(228, 139, 139) 
+     /* background: transparent;  */
 
 }
 .input-field{

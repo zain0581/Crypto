@@ -9,7 +9,7 @@
 }
 h2{
     font-weight: bold;
-    margin-top: 80px;
+    margin-top: 120px;
     margin-bottom: 20px;
     font-size: 3rem;
 
@@ -63,12 +63,12 @@ h5{
     font-size: 70%;
     font-style: italic;
     font-weight: 800;
-    color: darkgoldenrod;
+    color: rgb(255, 255, 255);
 
 }
 p{
     font-weight: 600;
-    color: darkmagenta;
+    color: rgb(236, 233, 236);
 }
 /* @media only screen and (max-width: 600px) {
 } */
