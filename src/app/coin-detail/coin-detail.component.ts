@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { NgToastService } from 'ng-angular-popup';
 import { ApiService } from '../services/api.service';
 
 @Component({
@@ -7,12 +9,20 @@ import { ApiService } from '../services/api.service';
   styleUrls: ['./coin-detail.component.css']
 })
 export class CoinDetailComponent  {
-  constructor( private api :ApiService)   { 
+  constructor( private api :ApiService, private toast : NgToastService, private router : Router)   { 
   }
   coins :any =[];
   ngOnInit():void{
     // calling the uder methods to see  Arrays with data in aplictaion inspect 
+    if (sessionStorage.getItem('Email')) {
    
+
+      } else {
+
+        this.toast.error({detail:"error",summary:"Please login First",duration:5000})
+        this.router.navigate(['/login']);
+       
+      }
     this.getalldata();
     // this.getalldata();
       }
