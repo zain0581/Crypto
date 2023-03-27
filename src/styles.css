@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 html{
+<<<<<<< HEAD
     overflow: scroll;
     overflow-x: hidden;
 }
@@ -8,3 +9,16 @@ html{
 }
 
 
+=======
+   /* overflow: hidden; */
+
+    overflow: auto;
+}
+::-webkit-scrollbar{
+  width:1px; /* remove scrollbar space  */
+}
+/* body {
+     overflow: block; 
+     
+  } */
+>>>>>>> 78bd1cf7f38d8aeca9c7de442ba71f4318f83b2f

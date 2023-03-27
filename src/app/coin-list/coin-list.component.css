@@ -1,9 +1,15 @@
 .headder{
  
    display: flex;
+<<<<<<< HEAD
  text-align: justify;
    flex-direction: column;
 
+=======
+   /* text-align: center; */
+   flex-direction: column;
+   /* justify-content: center; */
+>>>>>>> 78bd1cf7f38d8aeca9c7de442ba71f4318f83b2f
    color: rgb(255, 255, 255);   
    
 }
@@ -28,8 +34,13 @@ h2{
 }
 
 h6{
+<<<<<<< HEAD
     margin-top: 10px;
     color: rgb(255, 255, 255);
+=======
+   
+    margin-top: 10px;
+>>>>>>> 78bd1cf7f38d8aeca9c7de442ba71f4318f83b2f
     text-transform: capitalize;
     font-size: 1.4rem;
     font-weight: 500;
@@ -52,6 +63,7 @@ h6{
     
 }
 .sub-header{
+      /* margin-top: 100px;  */
     height: 50%;
     display: flex;
     align-items: center;
@@ -78,13 +90,23 @@ h5{
     font-size: 70%;
     font-style: italic;
     font-weight: 800;
+<<<<<<< HEAD
    
+=======
+    color: rgb(238, 238, 238);
+>>>>>>> 78bd1cf7f38d8aeca9c7de442ba71f4318f83b2f
 
 }
 p{
     font-weight: 600;
+<<<<<<< HEAD
    
+=======
+    color: rgb(236, 236, 236);
+>>>>>>> 78bd1cf7f38d8aeca9c7de442ba71f4318f83b2f
 }
+
+
 /* @media only screen and (max-width: 600px) {
 } */
 

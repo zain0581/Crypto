@@ -16,11 +16,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { SignupComponent } from './signup/signup.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ReactiveFormsModule } from '@angular/forms';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardComponent } from './UserComponent/dashboard/dashboard.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { NgToastModule } from 'ng-angular-popup';
 import { NotFoundComponent } from './not-found/not-found.component';
+
 
 
 
@@ -33,7 +34,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     LoginComponent,
     SignupComponent,
     DashboardComponent,
-    NotFoundComponent
+  NotFoundComponent
   ],
   imports: [
     BrowserModule,

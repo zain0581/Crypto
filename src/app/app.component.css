@@ -74,9 +74,12 @@ html {
  margin-right: 50px;
  padding: 4px;
 }
+<<<<<<< HEAD
 /* body {
   overflow: hidden;
 } */
+=======
+>>>>>>> 78bd1cf7f38d8aeca9c7de442ba71f4318f83b2f
 header {
   position: fixed;
   top: 0;
@@ -85,9 +88,17 @@ header {
 }
 
 footer {
+<<<<<<< HEAD
+=======
+ 
+>>>>>>> 78bd1cf7f38d8aeca9c7de442ba71f4318f83b2f
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 78bd1cf7f38d8aeca9c7de442ba71f4318f83b2f
 

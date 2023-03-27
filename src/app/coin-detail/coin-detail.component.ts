@@ -6,7 +6,7 @@ import { ApiService } from '../services/api.service';
   templateUrl: './coin-detail.component.html',
   styleUrls: ['./coin-detail.component.css']
 })
-export class CoinDetailComponent {
+export class CoinDetailComponent  {
   constructor( private api :ApiService)   { 
   }
   coins :any =[];
