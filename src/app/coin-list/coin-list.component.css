@@ -1,23 +1,34 @@
 .headder{
  
    display: flex;
-   text-align: center;
+ text-align: justify;
    flex-direction: column;
-   justify-content: center;
+
    color: rgb(255, 255, 255);   
    
 }
+/* h2{
+    font-weight: bold;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    
+    font-size: 3rem;
+    
+     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+   
+    
+    letter-spacing: -0.0083em;
+} */
 h2{
     font-weight: bold;
-    margin-top: 80px;
-    margin-bottom: 20px;
+    margin-top: 150px;
+    margin-bottom: 50px;
     font-size: 3rem;
-
     letter-spacing: -0.0083em;
 }
 
 h6{
-    margin-top: 50px;
+    margin-top: 10px;
     color: rgb(255, 255, 255);
     text-transform: capitalize;
     font-size: 1.4rem;
@@ -26,10 +37,13 @@ h6{
     letter-spacing: -0.00714em ;
 
 }
+.btn{
+    margin-top: 40px;
+}
 .banner{
     background-image: url('../../assets/wp4678541.webp');
     height: 100vh;
-background-size: cover;
+    background-size: cover;
     width: 100%;
     background-repeat: no-repeat;
 
@@ -41,6 +55,7 @@ background-size: cover;
     height: 50%;
     display: flex;
     align-items: center;
+    /* margin-top: 10vh; */
     
 }
 .card{
@@ -63,12 +78,12 @@ h5{
     font-size: 70%;
     font-style: italic;
     font-weight: 800;
-    color: darkgoldenrod;
+   
 
 }
 p{
     font-weight: 600;
-    color: darkmagenta;
+   
 }
 /* @media only screen and (max-width: 600px) {
 } */
