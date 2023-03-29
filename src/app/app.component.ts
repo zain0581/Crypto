@@ -39,7 +39,7 @@ export class AppComponent {
     // Here you can remove the user data from the local variable and redirect to the login page
     //  this.loggedInUser = null;
     sessionStorage.clear();
-    this.rout.navigate(['/login']);
+    this.rout.navigate(['/coin-list']);
   }
 
 }
