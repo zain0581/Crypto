@@ -56,16 +56,16 @@ export class ApiService {
 //It is a public Api From internet:
 // This is the public Api link for the header to the top treanding crunnecy...
   getTrendingCrunnecy(crunnecy:string){
-    return this.http.get<any>(``)
+    return this.http.get<any>(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=${crunnecy}&order=gecko_desc&per_page=10&page=1&sparkline=false&price_change_percentage=24h`)
     //link for Banner data 
-    // https://api.coingecko.com/api/v3/coins/markets?vs_currency=${crunnecy}&order=gecko_desc&per_page=10&page=1&sparkline=false&price_change_percentage=24h
+   //https://api.coingecko.com/api/v3/coins/markets?vs_currency=${crunnecy}&order=gecko_desc&per_page=10&page=1&sparkline=false&price_change_percentage=24h
   }
 
 
 
 //It is a public Api From internet:
   getCrunnecy(crunnecy:string){
-return this.http.get<any>(``);
+return this.http.get<any>(`https://localhost:7125/api/Coin`);
 //https://localhost:7125/api/Coin
    }
 
