@@ -73,6 +73,32 @@ html {
  margin-right: 50px;
  padding: 4px;
 }
+.dropdown-trigger {
+  cursor: pointer;
+  padding: 5px 12px;
+  background-color: transparent;
+  color: black;
+  margin-left: 100px;
+  border-radius: 50px;
+  border: 2px darkblue dotted;
+}
+
+.dropdown-menu {
+  
+ background-color: gold;
+
+}
+
+.dropdown-item {
+
+  padding: 8px 16px;
+  
+
+  background-color: red;
+  
+}
+
+
 /* header {
   position: fixed;
   top: 0;

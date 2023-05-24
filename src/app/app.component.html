@@ -6,6 +6,17 @@
       class="navbar navbar-expand-sm navbar-toggleable-sm  border-bottom box-shadow mb-0 border-top mt-10 box-shadow bg-secondary p-3" *ngIf= "!getData()"
 
     ><div >  <img [routerLink]="['/coin-list']"  class ="imgg mt-2" src="assets\btc++.svg" > </div>
+      
+    <div class="dropdown">
+      <div class="dropdown-trigger" [matMenuTriggerFor]="menu">Select Option</div>
+      <mat-menu #menu="matMenu" class="dropdown-menu">
+        <button mat-menu-item class="dropdown-item">Option 1</button>
+        <button mat-menu-item class="dropdown-item">Option 2</button>
+        <button mat-menu-item class="dropdown-item">Option 3</button>
+      </mat-menu>
+    </div>
+    
+    
  
       <div class="container" >
         
@@ -28,7 +39,9 @@
           class="navbar-collapse collapse d-sm-inline-flex justify-content-end"
           [ngClass]="{ show: isExpanded }"
         >
+        
           <ul class="navbar-nav flex-grow">
+            
             <li *ngIf= "!getData()" 
               class="nav-item"
               [routerLinkActive]="['link-active']"
@@ -37,18 +50,24 @@
               <a class="nav-link text-dark" [routerLink]="['/coin-list']" >Home  </a>
               
             </li>
+         
+ 
+
 
             <li *ngIf= "!getData()" class="nav-item" [routerLinkActive]="['link-active']">
               <a class="nav-link text-dark" [routerLink]="['/login']"
                 >Login</a
               >
             </li>
+            
 
             <li *ngIf= "!getData()" class="nav-item " [routerLinkActive]="['link-active']">
               <a class="nav-link text-dark" [routerLink]="['/signup']"
                 >Signup</a
               >
             </li>
+        
+          
 <!-- 
             <li *ngIf= "getData()" class="nav-item " [routerLinkActive]="['link-active']">
               <a class="nav-link text-dark" [routerLink]="['/signup']"

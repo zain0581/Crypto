@@ -21,6 +21,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { NgToastModule } from 'ng-angular-popup';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { MatMenuModule } from '@angular/material/menu';
 
 
 
@@ -49,7 +50,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     ReactiveFormsModule,
     MatTableModule,
     MatPaginatorModule,
-    NgToastModule
+    NgToastModule,
+    MatMenuModule
   
   ],
   providers: [],
